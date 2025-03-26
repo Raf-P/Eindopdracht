@@ -1,0 +1,497 @@
+/* ALGEMEEN */
+:root {
+    --dark-blue-color: #193174;
+    --darker-blue-color: #142657;
+    --gold-color: #EBB73F;
+    --mint-color: #E4F5F2;
+    --light-gray-color: #dfdfdf;
+    --dark-gray-color: #adadad;
+}
+
+
+
+/* HERHAALDE CODE */
+/* Verwijdering van content voor kleine schermen */
+#area2small,
+#area3small {
+    display: none;
+}
+
+/* Ruimte voor content */
+#area3 > section,
+#area4 > main {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 0 10px;
+}
+
+
+
+/* GEBIED 3: BOVENSTE DEEL VAN CONTENT */
+#area3 {
+    background-color: var(--mint-color);
+    background-image: url(../images/area3pattern.png);
+    width: 100%;
+}
+#area3 > section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 600px;
+}
+
+/* #area3facemask; tekst en knop */
+#area3facemask {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 20px;
+}
+#area3facemask > li p,
+#area3facemask > li h1,
+#area3facemask > li button {
+    color: var(--dark-blue-color);
+}
+#area3facemask > li:nth-of-type(1) > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#area3facemask > li:nth-of-type(1) > ul img {
+    position: relative;
+    bottom: 4px;
+}
+#area3facemask > li:nth-of-type(2) > h1 {
+    font-size: 45px;
+}
+#area3facemask > li:nth-of-type(4) > a > button {
+    padding: 15px 30px;
+    background-color: var(--gold-color);
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+/* #area3dots; vier stippen aan de onderkant */
+#area3dots {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-self: flex-end;
+    margin-bottom: 25px;
+    margin-right: 20px;
+}
+#area3dots > li:not(:nth-of-type(2)) img {
+    padding-bottom: 2px;
+}
+#area3dots > li:nth-of-type(2) img {
+    border: 1px var(--dark-blue-color) solid;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+/* area3image; afbeelding */
+#area3image {
+    margin-right: 20px;
+    height: 500px;
+    width: auto;
+    align-self: flex-end;
+}
+
+
+
+/* GEBIED 4: ONDERSTE DEEL VAN CONTENT */
+#area4 > main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+/* #area4categories; LIJST VAN CATEGORIEËN AAN DE BOVENKANT */
+#area4categories {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#area4categories > h2,
+.area4categorieslistinlist i,
+.area4categorieslistinlist h4 {
+    color: var(--dark-blue-color);
+}
+#area4categories > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 150px;
+}
+.area4categorieslistinlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.area4categorieslistinlist > li:first-of-type {
+    background-color: var(--mint-color);
+    padding: 40px;
+    border-radius: 90px;
+}
+.area4categorieslistinlist > li:first-of-type i {
+    font-size: 50px;
+}
+
+/* #area4deals; ALLES TUSSEN DE LIJSTEN "Daily Deal Of The Day" EN "Hospital and Medical Equipment" */
+#area4deals {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+/* #area4deals > ul:nth-of-type(1); eerste lijst (Daily Deal Of The Day) */
+#area4deals > ul:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#area4dealsheader1 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+#area4dealsheader1 h2 {
+    color: var(--dark-blue-color);
+}
+#area4dealsheader1 > li:last-of-type > p {
+    color: white;
+    background-color: var(--gold-color);
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+#area4dealsheader1 > li:last-of-type > p > span {
+    font-weight: bold;
+}
+#area4deals > ul:nth-of-type(1) > li:last-of-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    overflow: hidden;
+}
+#area4deals > ul:nth-of-type(1) > li:last-of-type > a /*  #area4deals > ul:nth-of-type(1) > li:last-of-type > a; deze code is voor de twee knoppen met pijlen naar links en rechts die links en rechts van de eerste rij producten staan. */ {
+    align-self: center;
+    padding: 15px;
+    border-radius: 90px;
+    background-color: var(--mint-color);
+}
+#area4deals > ul:nth-of-type(1) > li:last-of-type > a:first-of-type {
+    position: absolute;
+    left: 30px;
+}
+#area4deals > ul:nth-of-type(1) > li:last-of-type > a:last-of-type {
+    position: absolute;
+    right: 30px;
+}
+.area4dealsproduct {
+    width: 15vw;
+}
+.area4dealsproduct > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.area4dealsproduct > div:first-of-type > a > img {
+    max-width: 15vw;
+    height: auto;
+}
+.area4productlinks /* .area4productlinks; deze code is voor het verschijnen en verdwijnen van de drie knoppen als over een product wordt gezweefd. */ {
+    display: none;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    bottom: 35px;
+}
+.area4dealsproduct > div:first-of-type > a:hover + .area4productlinks,
+.area4moreproductcontent > div:first-of-type > a:hover + .area4productlinks,
+.area4productlinks:hover {
+    display: flex;
+}
+.area4productlinksicon {
+    padding: 15px;
+    border-radius: 90px;
+    background-color: var(--mint-color);
+    color: var(--dark-blue-color);
+}
+.area4productlinksicon2 {
+    padding: 15px;
+    border-radius: 90px;
+    background-color: var(--dark-blue-color);
+    color: var(--mint-color);
+}
+.area4dealsproducttags /* .area4dealsproducttags; deze code is voor de twee tags (-67% en HOT) over het vierde product. */ {
+    position: absolute;
+    align-self: flex-start;
+}
+.area4dealsproducttags > p {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+.area4dealsproducttags > p:first-of-type {
+    position: relative;
+    bottom: 10px;
+    background-color: var(--gold-color);
+}
+.area4dealsproducttags > p:last-of-type {
+    background-color: #c5945c;
+}
+.area4dealsproduct > div:last-of-type,
+.area4moreproductcontent > div:last-of-type {
+    margin-top: 15px;
+}
+.area4dealsproduct > div:last-of-type p,
+.area4dealsproduct > div:last-of-type > a,
+.area4moreproductcontent > div:last-of-type p,
+.area4moreproductcontent > div:last-of-type > a {
+    color: var(--dark-blue-color);
+    margin-bottom: 7.5px;
+}
+.area4dealsproduct > div:last-of-type span,
+.area4moreproductcontent > div:last-of-type span {
+    color: var(--dark-gray-color);
+    font-size: 14px;
+}
+.area4dealsproductbar {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    height: 4px;
+    background-color: var(--light-gray-color);
+}
+.area4dealsproductbar > div {
+    width: calc(300px / 28 * 6);
+    height: 4px;
+    background-color: var(--gold-color);
+}
+.area4dealsproductdata {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 7.5px;
+    justify-content: space-between;
+}
+
+/* #area4deals > ul:nth-of-type(2); tweede lijst (drie gekleurde vakken) */
+#area4deals > ul:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+}
+.area4dealbetween {
+    width: 475px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.area4dealbetween:nth-of-type(1) {
+    background-color: #ebe4f1;
+}
+.area4dealbetween:nth-of-type(2) {
+    background-color: var(--mint-color)
+}
+.area4dealbetween:nth-of-type(3) {
+    background-color: #ebebdd;
+}
+.area4dealbetween > article {
+    width: 425px;
+    height: 225px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+.area4dealbetween > article > ul {
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+    gap: 50px;
+}
+.area4dealbetween > article > ul h2,
+.area4dealbetween > article > ul h3 {
+    color: var(--dark-blue-color);
+}
+.area4dealbetween > article > ul a {
+    color: white;
+    background-color: var(--dark-blue-color);
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+.area4dealbetween > article > img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* #area4deals > ul:nth-of-type(3); derde lijst (Featured Products) (Er is veel code uit #area4deals > ul:nth-of-type(1) geleend voor deze lijst!) */
+#area4deals > ul:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#area4deals > ul:nth-of-type(3) > li:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    overflow: hidden;
+}
+#area4dealsheader3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#area4dealsheader3links {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+#area4dealsheader3 h2,
+#area4dealsheader3links a {
+    color: var(--dark-blue-color);
+    font-weight: bold;
+}
+#area4dealsheader3links a:hover {
+    text-decoration: underline;
+}
+#area4deals > ul:nth-of-type(3) > li:nth-of-type(3) {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-self: center;
+}
+#area4deals > ul:nth-of-type(3) > li:nth-of-type(3) > a:not(:nth-of-type(2)) img {
+    padding-bottom: 2px;
+}
+#area4deals > ul:nth-of-type(3) > li:nth-of-type(3) > a:nth-of-type(2) img {
+    border: 1px var(--dark-blue-color) solid;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+/* #area4more; ALLES TUSSEN DE LIJST "Hospital and Medical Equipment" EN DE FOOTER */
+#area4more {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 90px;
+}
+#area4more > ul,
+#area4more > aside {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* #area4more > ul; vierde en vijfde lijst (Hospital and Medical Equipment en Face Mask) */
+.area4moreheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.area4moreheader h2,
+.area4moreheader a {
+    font-weight: bold;
+    color: var(--dark-blue-color);
+}
+.area4moreheader a:hover {
+    text-decoration: underline;
+}
+#area4more > ul > li:last-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 450px;
+}
+#area4more > ul > li:last-of-type > article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#area4morefirstitem1 {
+    background-color: #94f8ff;
+}
+.area4morefirstitemcontent,
+.area4moreproductcontent {
+    width: 15vw;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+.area4morefirstitemcontent > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.area4morefirstitemcontent > div:first-of-type > p {
+    color: var(--dark-gray-color);
+}
+.area4morefirstitemcontent > div:first-of-type > h2 {
+    color: var(--dark-blue-color);
+}
+.area4morefirstitemcontent > div:first-of-type > a {
+    color: white;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: var(--dark-blue-color);
+    border-radius: 30px;
+}
+.area4morefirstitem1content > div:last-of-type > img,
+.area4moreproductcontent > div:first-of-type > a > img {
+    max-width: 15vw;
+    height: auto;
+}
+.area4moreproductcontent > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#area4morefirstitem2 {
+    background-color: #cae9ca;
+}
+.area4morefirstitem2content > div:last-of-type > img {
+    max-width: 10vw;
+    height: auto;
+    position: relative;
+    left: 5.5vw;
+}
+
+/* #area4more > aside; zesde lijst (Our Blog) */
+#area4more > aside > div:last-of-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+#area4more > aside > div:last-of-type > article {
+    max-width: 26vw;
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px;
+}
+#area4more > aside > div:last-of-type > article > img {
+    max-width: 26vw;
+    height: auto;
+}
+#area4more > aside > div:last-of-type > article > p {
+    color: var(--dark-gray-color);
+}
+#area4more > aside > div:last-of-type > article > p > span {
+    margin-left: 15px;
+}
+#area4more > aside > div:last-of-type > article > a {
+    color: var(--dark-blue-color);
+}

@@ -1,0 +1,431 @@
+/* ALGEMEEN */
+:root {
+    --dark-blue-color: #193174;
+    --darker-blue-color: #142657;
+    --gold-color: #EBB73F;
+    --mint-color: #E4F5F2;
+    --light-gray-color: #dfdfdf;
+    --dark-gray-color: #adadad;
+}
+
+
+
+/* HERHAALDE CODE */
+/* Plaatsing van content voor kleine schermen en verwijdering van content voor grote schermen */
+#area3,
+#area4 {
+    display: none;
+}
+#area2small,
+#area3small {
+    display: block
+}
+
+/* Ruimte voor content */
+#area2small > section,
+#area3small > main {
+    padding: 0 15px;
+}
+
+
+
+/* GEBIED 2: BOVENSTE DEEL VAN CONTENT */
+#area2small {
+    background-color: var(--mint-color);
+    background-image: url(../images/area3pattern.png);
+    width: 100%;
+}
+#area2small > section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/* #area2smallfacemask; tekst en afbeelding */
+#area2smallfacemask {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 20px;
+}
+#area2smallfacemask p,
+#area2smallfacemask h1,
+#area2smallfacemask li button {
+    color: var(--dark-blue-color);
+}
+#area2smallfacemask > div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#area2smallfacemask > a > button {
+    padding: 15px 30px;
+    background-color: var(--gold-color);
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+/* .smallfacemaskdots; vier stippen aan de onderkant */
+.smallfacemaskdots {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.smallfacemaskdots > a:not(:nth-of-type(2)) img {
+    padding-bottom: 2px;
+}
+.smallfacemaskdots > a:nth-of-type(2) img {
+    border: 1px var(--dark-blue-color) solid;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+
+
+/* GEBIED 3: ONDERSTE DEEL VAN CONTENT */
+#area3small > main {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* #area3smallcategories; lijst van categorieën aan de bovenkant */
+#area3smallcategories {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#area3smallcategories > h2,
+.area3smallcategoriesinlist i,
+.area3smallcategoriesinlist h4 {
+    color: var(--dark-blue-color);
+}
+#area3smallcategories > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 80px;
+    row-gap: 50px;
+    
+}
+.area3smallcategoriesinlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.area3smallcategoriesinlist i {
+    font-size: 40px;
+    background-color: var(--mint-color);
+    padding: 35px;
+    border-radius: 90px;
+}  
+
+/* #area3smalldeals; de drie gekleurde vakken met een icoon aan de rechterkant */
+#area3smalldeals {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#area3smalldeals > article {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#area3smalldeals > article:nth-last-of-type(1) {
+    background-color: #ebe4f1;
+}
+#area3smalldeals > article:nth-last-of-type(2) {
+    background-color: var(--mint-color)
+}
+#area3smalldeals > article:nth-last-of-type(3) {
+    background-color: #ebebdd;
+}
+#area3smalldeals > article > div:first-of-type {
+    align-self: flex-end;
+    max-width: 40vw;
+    margin-left: 7.5vw;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#area3smalldeals > article > div:first-of-type > h2 {
+    color: var(--dark-blue-color);
+}
+#area3smalldeals > article > div:first-of-type > p {
+    color: var(--dark-gray-color);
+}
+#area3smalldeals > article > div:first-of-type > a {
+    color: white;
+    padding: 12.5px 20px;
+    background-color: var(--gold-color);
+    border-radius: 30px;
+    width: 118px
+}
+#area3smalldeals > article > div:last-of-type > i {
+    color: var(--dark-blue-color);
+    font-size: 100px;
+    margin-right: 7.5vw;
+}
+
+/* #area3smalltrendy; De vier producten onder "OUR TRENDY PRODUCTS" */
+#area3smalltrendy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+#area3smalltrendy > h1 {
+    font-weight: lighter;
+}
+#area3smalltrendy > h1 > span {
+    font-weight: bold;
+}
+#area3smalltrendy > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 15px;
+    justify-content: center;
+    max-width: 66vw;
+}
+#area3smalltrendy > div:first-of-type > a {
+    color: var(--dark-gray-color);
+}
+#area3smalltrendy > div:first-of-type > a > span {
+    color: black;
+    text-decoration: underline;
+}
+#area3smalltrendy > div:last-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 25px;
+}
+.area3smallproduct {
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px;
+}
+.area3smallproduct > img {
+    max-width: 45.5vw;
+    height: auto;
+}
+.area3smallproduct > div {
+    margin-top: 7.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.area3smallproduct > div p,
+.area3smallproduct > div a i {
+    color: var(--dark-gray-color);
+    font-size: 14px;
+}
+.area3smallproduct > a,
+.area3smallproduct > p:first-of-type {
+    color: var(--dark-blue-color);
+}
+.area3smallproduct > p:last-of-type {
+    color: green;
+}
+.area3smallproduct > p:last-of-type span {
+    color: red;
+}
+#area3smalltrendy > a {
+    text-decoration: underline;
+}
+
+/* #area3smallhighlights; Het vak over een lente-actie (SPRING COLLECTION) en de twee vakken eronder */
+#area3smallhighlights {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#area3smallhighlights > article {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 7.5px;
+}
+#area3smallhighlights > article:nth-of-type(1) {
+    background-color: #ffadcd;
+}
+#area3smallhighlights > article:nth-of-type(2) {
+    background-color: #94f8ff;
+}
+#area3smallhighlights > article:nth-of-type(3) {
+    background-color: #cae9ca;
+}
+#area3smallhighlights > article > div {
+    max-width: 40vw;
+    margin-left: 7.5vw;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+#area3smallhighlightsspring {
+    gap: 10px;
+}
+#area3smallhighlightsspring > i {
+    font-size: 100px;
+    color: #992250;
+    position: absolute;
+    right: 75px;
+}
+#area3smallhighlightsspring > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+}
+#area3smallhighlightsspring > div:first-of-type > p {
+    margin-left: 15px;
+}
+#area3smallhighlightsspring > h2 {
+    font-weight: lighter;
+    font-size: 30px;
+}
+#area3smallhighlightsspring > h2 > span {
+    font-weight: bold;
+}
+#area3smallhighlightsspring > a {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+#area3smallhighlightsspring > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#area3smallhighlightsspring > div:last-of-type > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+#area3smallhighlightsspring > div:last-of-type > div:last-of-type {
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+}
+#area3smallhighlightsspring > div:last-of-type > div:last-of-type > p {
+    color: var(--dark-gray-color);
+}
+#area3smallhighlights > article:not(:nth-of-type(1)) > div {
+    gap: 30px;
+}
+#area3smallhighlights > article:not(:nth-of-type(1)) > div > p {
+    color: var(--dark-gray-color);
+}
+#area3smallhighlights > article:not(:nth-of-type(1)) > div > h2 {
+    color: var(--dark-blue-color);
+}
+#area3smallhighlights > article:not(:nth-of-type(1)) > div > a {
+    color: white;
+    padding: 15px 25px;
+    background-color: var(--dark-blue-color);
+    border-radius: 30px;
+    width: 126px;
+}
+#area3smallhighlights > article:nth-of-type(2),
+#area3smallhighlights > article:nth-of-type(3) {
+    background-repeat: no-repeat;
+}
+#area3smallhighlights > article:nth-of-type(2) {
+    background-image: url(../images/bacteria.jpg);
+    background-size: 300px auto;
+    background-position: 55vw;
+}
+#area3smallhighlights > article:nth-of-type(3) {
+    background-image: url(../images/facemask.jpg);
+    background-size: auto 225px;
+    background-position: 60vw;
+}
+
+/* #area3smalllimited; de twee producten onder "LIMITED EDITION" (Code voor de producten is uit #area3smalltrendy geleend, de code voor de stippen uit .smallfacemaskdots in gebied 2 geleend.) */
+#area3smalllimited {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+#area3smalllimited > h2 {
+    font-weight: lighter;
+}
+#area3smalllimited > h2 > span {
+    font-weight: bold;
+}
+#area3smalllimited > div:first-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+}
+#area3smalllimited > div:first-of-type > a {
+    padding: 15px 20px;
+    background-color: white;
+    border: 1px var(--dark-gray-color) solid;
+    border-radius: 90px;
+    position: absolute;
+    align-self: center;
+}
+#area3smalllimited > div:first-of-type > a:first-of-type {
+    left: 2vw;
+}
+#area3smalllimited > div:first-of-type > a:last-of-type {
+    right: 2vw;
+}
+
+/* #area3rest; het onderste deel van het onderste deel van content (vanaf de @UOMO) */
+#area3rest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+#area3rest > h2 {
+    font-weight: lighter;
+    font-size: 35px;
+}
+#area3rest > article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+}
+#area3rest > article > img {
+    max-width: 29vw;
+    height: auto;
+}
+#area3rest > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+#area3rest > div > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#area3rest > div > article > i {
+    font-size: 40px;
+}
+#area3rest > div > article > p {
+    font-size: 14px;
+    color: var(--dark-gray-color);
+}

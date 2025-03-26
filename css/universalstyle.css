@@ -1,0 +1,258 @@
+/* ALGEMEEN */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+:root {
+    --dark-blue-color: #193174;
+    --darker-blue-color: #142657;
+    --gold-color: #EBB73F;
+    --mint-color: #E4F5F2;
+    --light-gray-color: #dfdfdf;
+    --dark-gray-color: #adadad;
+}
+body,
+head,
+select,
+input {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* HERHAALDE CODE */
+/* Verwijdering van content voor kleine schermen */
+#area1small,
+#arealastsmall {
+    display: none;
+}
+
+/* Ruimte voor content */
+#area1 > nav,
+#area1 > header,
+#area2 > nav,
+#arealast1 > footer,
+#arealast2 > div {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 0 10px;
+}
+
+/* Flex */
+#area1 > nav,
+#area1 > nav > ul,
+#area1 > header > ul,
+#area1searchbar,
+#area1searchbar > form,
+#area1headericons,
+#area2 > nav,
+#area2 > nav > ul,
+#arealast1 > footer,
+#arealast1 > footer > section:first-of-type,
+#arealast1email,
+#arealast1 > footer > section:last-of-type > ul:nth-of-type(1),
+#arealast1icons,
+.arealast1links,
+#backtotop,
+#arealast2 > div {
+    display: flex;
+}
+#area1 > nav,
+#area1 > nav > ul,
+#area1 > header > ul,
+#area1searchbar,
+#area1searchbar > form,
+#area2 > nav,
+#area2 > nav > ul,
+#arealast1email,
+#arealast1icons,
+#arealast2 > div {
+    flex-direction: row;
+}
+#arealast1 > footer,
+#arealast1 > footer > section:first-of-type,
+#arealast1 > footer > section:last-of-type > ul:nth-of-type(1),
+.arealast1links {
+    flex-direction: column;
+}
+#area1 > nav,
+#area1 > header > ul,
+#area2 > nav,
+#area2 > nav > ul {
+    justify-content: space-between;
+}
+#backtotop,
+#arealast2 > div {
+    justify-content: center;
+}
+#area1 > header > ul,
+#area1searchbar > form,
+#area2 > nav,
+#area2 > nav > ul,
+#arealast1 > footer > section:first-of-type,
+#backtotop,
+#arealast2 > div {
+    align-items: center;
+}
+
+/* Overig */
+#area1localization > form > select,
+#area1searchbar > form > input,
+#area1searchbar > form > select,
+#area2 > nav > a,
+#area2 > nav > ul > li > a,
+#area2 > nav > ul > li > form > select,
+#arealast1email > input {
+    border: none;
+}
+#area2 > nav > a,
+#area2 > nav > ul > li > a,
+#area2 > nav > ul > li > form > select,
+#arealast1email > input:last-of-type,
+#arealast1 > footer > section:first-of-type > h2,
+#arealast1 > footer > section:first-of-type > p,
+#arealast1 > footer > section:last-of-type > ul a,
+#arealast1 > footer > section:last-of-type > ul li,
+#arealast2 > div > a {
+    color: white;
+}
+#area2,
+#area2 > nav > ul > li > form > select > option,
+#arealast1 {
+    background-color: var(--dark-blue-color);
+}
+
+
+
+/* GEBIED 1: HEADER */
+/* <nav>; bovenste deel van de header */
+#area1 > nav > ul {
+    margin: 15px 0;
+}
+#area1 > nav > ul:first-of-type {
+    gap: 15px;
+}
+#area1 > nav > ul:last-of-type {
+    gap: 25px;
+}
+#area1localization > form > select:first-of-type {
+    margin-right: 20px;
+}
+
+/* <header>; onderste deel van de header */
+#area1 > header > ul {
+    margin: 25px 0;
+}
+#area1searchbar > form {
+    justify-content: stretch;
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid var(--light-gray-color);
+    border-radius: 30px
+}
+#area1searchbar > form > a {
+    margin-right: 10px;
+}
+#area1searchbar > form > input {
+    width: 40vw;
+}
+#area1headericons {
+    gap: 20px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+
+/* GEBIED 2: NAVIGATIE */
+#area2 > nav > ul {
+    gap: 20px;
+    margin: 15px 0;
+}
+#area2 > nav > a,
+#area2 > nav > ul > li > a,
+#area2 > nav > ul > li > form > select {
+    background: none;
+}
+#area2categories {
+    margin-right: 40px;
+}
+
+
+
+/* GEBIED LAATSTE 1: FOOTER */
+/* <section :first-of-type>; bovenste deel van de footer */
+#arealast1 > footer {
+    gap: 60px;
+}
+#arealast1 > footer > section:first-of-type {
+    margin-top: 60px;
+    gap: 15px;
+}
+#arealast1email {
+    gap: 10px;
+}
+#arealast1email > input {
+    border-radius: 3px;
+}
+#arealast1email > input:first-of-type {
+    padding: 10px;
+    width: 25vw;
+}
+#arealast1email > input:last-of-type {
+    padding: 10px 0;
+    width: 5vw;
+    text-align: center;
+    background-color: var(--gold-color);
+}
+
+/* <section :last-of-type>; onderste deel van de footer */
+#arealast1 > footer > section:last-of-type {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+#arealast1 > footer > section:last-of-type > ul:nth-of-type(1) {
+    gap: 30px;
+}
+#arealast1usa {
+    margin-bottom: 15px;
+}
+#arealast1icons {
+    gap: 25px;
+}
+.arealast1headers {
+    margin-bottom: 30px;
+}
+.arealast1links {
+    gap: 20px;
+}
+
+/* #backtotop; knop om terug naar boven te gaan */
+#backtotop {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: var(--light-gray-color);
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+
+
+/* GEBIED LAATSTE 2: BODEM */
+#arealast2 {
+    background-color: var(--darker-blue-color);
+}
+#arealast2 > div > a {
+    margin: 15px 0;
+}

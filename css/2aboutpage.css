@@ -1,0 +1,139 @@
+/* ALGEMEEN */
+:root {
+    --dark-blue-color: #193174;
+    --darker-blue-color: #142657;
+    --gold-color: #EBB73F;
+    --mint-color: #E4F5F2;
+    --light-gray-color: #dfdfdf;
+    --dark-gray-color: #adadad;
+}
+
+
+
+/* HERHAALDE CODE */
+/* Verwijdering van content voor kleine schermen */
+#area2small {
+    display: none;
+}
+
+/* Ruimte voor content */
+#area3 > main {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 0 10px;
+}
+
+/* Overig */
+h6 {
+    font-size: 18px;
+}
+
+
+
+/* GEBIED 3: DE HELE CONTENT */
+#area3 {
+    color: var(--dark-blue-color);
+}
+#area3 > main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* #area3 > main > h1; "ABOUT UOMO" bovenaan */
+#area3 > main > h1 {
+    margin-top: 70px;
+    margin-left: 15vw;
+    font-size: 40px;
+}
+
+/* #area3 > main > img; de foto onder "ABOUT UOMO" */
+#area3 > main > img {
+    opacity: 0.66;
+    max-width: 1600px;
+    height: auto;
+}
+
+/* #area3 > main > article:first-of-type; "OUR STORY" en de stukken tekst daaronder */
+#area3 > main > article:first-of-type {
+    align-self: center;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+#area3missionvision {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+#area3missionvision > div {
+    display: flex;
+    flex-direction: column;
+    gap: 17.5px;
+}
+
+/* #area3 > main > article:last-of-type; de foto van de dokter en de tekst daarnaast met de drie beloften van het bedrijf eronder */
+#area3 > main > article:last-of-type {
+    align-self: center;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+#area3 > main > article:last-of-type > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#area3company {
+    gap: 50px;
+}
+#area3company > img {
+    max-width: 33vw;
+    height: auto;
+}
+#area3company > div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px
+}
+#area3company > div > h6 {
+    color: var(--dark-gray-color);
+}
+#area3promises {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+#area3promises > article {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#area3promises > article > i {
+    font-size: 45px;
+}
+#area3promises > article > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#area3promises > article > div > p {
+    color: var(--dark-gray-color);
+}
+
+/* #area3 > main > aside; de foto van merken aan de onderkant */
+#area3 > main > aside {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px 0;
+}
+#area3 > main > aside > img {
+    max-width: 66vw;
+    height: auto;
+}

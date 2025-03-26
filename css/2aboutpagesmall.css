@@ -1,0 +1,150 @@
+/* ALGEMEEN */
+:root {
+    --dark-blue-color: #193174;
+    --darker-blue-color: #142657;
+    --gold-color: #EBB73F;
+    --mint-color: #E4F5F2;
+    --light-gray-color: #dfdfdf;
+    --dark-gray-color: #adadad;
+}
+
+
+
+/* HERHAALDE CODE */
+/* Plaatsing van content voor kleine schermen en verwijdering van content voor grote schermen */
+#area3 {
+    display: none;
+}
+#area2small {
+    display: block
+}
+
+/* Ruimte voor content */
+#area2small > main {
+    padding: 0 15px;
+}
+
+
+
+/* GEBIED 2: DE HELE CONTENT */
+#area2small {
+    color: var(--dark-blue-color);
+}
+#area2small > main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* #area2small > main > h1; "ABOUT UOMO" bovenaan */
+#area2small > main > h1 {
+    margin-top: 35px;
+    margin-left: 7.5vw;
+    font-size: 30px;
+}
+
+/* #area2small > main > img; de foto onder "ABOUT UOMO" */
+#area2small > main > img {
+    opacity: 0.66;
+    max-width: 100%;
+    height: auto;
+}
+
+/* #area2small > main > div:nth-of-type(1); de drie gekleurde vakken over het verhaal en de doelen van het bedrijf (OUR STORY, Our Mission, Our Vision) */
+#area2small > main > div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+#area2small > main > div:nth-of-type(1) > article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    height: 350px;
+    width: 85vw;
+}
+#area2small > main > div:nth-of-type(1) > article > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    width: 75vw;
+    height: 275px;
+}
+#area2smallstory {
+    background-color: #b1bb94;
+    background-image: url(../images/area3pattern.png);
+    background-position: 600px 0;
+}
+#area2smallmission {
+    background-color: #939dbb;
+    background-image: url(../images/area3pattern.png);
+    background-position: 100px 0;
+}
+#area2smallvision {
+    background-color: #bb959a;
+    background-image: url(../images/area3pattern.png);
+    background-position: 250px 0;
+}
+
+/* #area2small > main > div:nth-of-type(2); het donkerblauwe vak over het bedrijf (THE COMPANY) */
+#area2smallcompany {
+    background-color: var(--darker-blue-color);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 0;
+}
+#area2smallcompany > div,
+#area2smallcompany > img {
+    width: 40vw;
+    height: auto;
+ }
+#area2smallcompany > div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+#area2smallcompany > div > img {
+    width: 112.5px;
+    margin-bottom: 20px;
+}
+
+/* #area2small > main > div:nth-of-type(3); de drie beloften van het bedrijf onder het donkerblauwe vak en de foto van merken aan de onderkant */
+#area2smallpromises {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    color: black;
+}
+#area2smallpromises > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#area2smallpromises > article > i {
+    font-size: 40px;
+}
+#area2smallpromises > article > p {
+    font-size: 14px;
+    color: var(--dark-gray-color);
+}
+#area2smallpromises > aside {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px 0;
+}
+#area2smallpromises > aside > img {
+    max-width: 85vw;
+    height: auto;
+}
